@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>statistic</title>
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'icons/icon1.ico' %}"/>
+    <script src="{% static 'js/connect.js' %}"></script>
+</head>
+<body>
+number of users {{ number_of_login_users }}<br>
+number of connected users {{ number_of_connected_users }}
+</body>
+</html>

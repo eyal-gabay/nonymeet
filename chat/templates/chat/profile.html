@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nonymeet</title>
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'icons/icon1.ico' %}"/>
+    <script src="{% static 'js/connect.js' %}"></script>
+</head>
+<style>
+    body {
+        background-color: #191919;
+    }
+
+    h1 {
+        color: white;
+    }
+
+    h2 {
+        color: white;
+    }
+
+    p {
+        color: white;
+    }
+
+    #main {
+        position: absolute;
+        top: 15%; left: 20%;
+        width: 60%; height: 60%;
+        background-color: #171C3A;
+        border-style: solid;
+    }
+
+    #about {
+        position: absolute;
+        left: 50%; top: 16%;
+    }
+
+    #about_p {
+        position: absolute;
+        left: 50%; top: 25%;
+        width: 25%;
+        word-break: keep-all;
+    }
+
+</style>
+<body>
+    <div id="main">
+        <h1>&nbsp;&nbsp;&nbsp;name: {{ name }}</h1><br>
+        <h1>&nbsp;&nbsp;&nbsp;age: {{ age }}</h1><br>
+        <h1>&nbsp;&nbsp;&nbsp;gender: {{ gender }}</h1><br>
+    </div>
+    <h1 id="about">about {{ name }}</h1>
+    <p id="about_p">{{ about }}</p>
+</body>
+</html>

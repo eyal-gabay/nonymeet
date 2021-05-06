@@ -1,0 +1,34 @@
+POST HTTP/1.1
+Host: 109.64.48.94:8080
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.284
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cache-Control: max-age=0
+Cookie: csrftoken=HdGYa9e3oaGovgje0PKAco5Zuc2AAKN8Lvhf1hmIIOMoat6fyugQ8I3y7Jj6Q9Rl
+Origin: http://109.64.48.94:8080
+Referer: http://109.64.48.94:8080/register/register/
+Upgrade-Insecure-Requests: 1
+
+
+b'rfmiddlewaretoken=NAXJLSxOMdSfYF8OJfGLx4YpgdHYJ1EpRSy0C0Ft6RYfDSVPhUc1toWYTKYuZqIC&nickname=ko&username=ko&password=ko&passwordagain=ko&g-recaptcha-response=03AGdBq26G_5tHBLyj6zX7gCsblMIE6BKiPXpO7i04729nxeETn53ePm-hHmchMfuC7MS_z10hbi59Y4iH423ODYZpmysp1SV4-h1F2wl_8llQtjxzLLLTw06a73jCPaTeChpvV5uxZ7bCug--nCwhu2bd8tXTXapTCederNr--pYhlJlD-P722m2D1DDTpkTXMq-5PJTqMZbOYZG4ZnwxXg_1sVXoqH7-4X20i5_zGWCsr1brnfD7MVBgAYdq9GdLR89nh-E1Y7WAdnJLosnXVAkuWOD2Q2zEfNPWdzwYvfdXmlGHWqmzdoyVPVOIUL5-F-YljNwjIdQWSjflJTajL7lXuIXRCLPIHLzVGBup_8AwyIRnH_95PGabHnNawEFbElbR_Up5PBjEb_5a-WRys_-1T9xSfQy80j9n_vCf6d3iZY56CXKn0Gpv1EqFFTfCFSXD77HHyfN'
+
+
+
+POST HTTP/1.1
+Host: 109.64.48.94:8080
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.284
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cache-Control: max-age=0
+Cookie: csrftoken=HdGYa9e3oaGovgje0PKAco5Zuc2AAKN8Lvhf1hmIIOMoat6fyugQ8I3y7Jj6Q9Rl
+Origin: http://109.64.48.94:8080
+Referer: http://109.64.48.94:8080/register/register/
+Upgrade-Insecure-Requests: 1
+
+
+b'rfmiddlewaretoken=yx5uX82PhrhQHv7qTvBhj0IgIRZjcibBCPGLOgauB5nQmIUrra7xfkGPlogPsHfO&nickname=pi&username=pi&password=pi&passwordagain=pi&g-recaptcha-response=03AGdBq271rO2uxEbXFvk6x0SUTTbhJrE68wTmMiSZAYjsUnBW3zKenypBrekkmOY6zd96viG17KiCw8KXFu3wzJ5oHimQzmP6IJ6q7wEXWrdBQPE-HJJJIbLwwbzDhsTn58IIMyktDx5hTFPByJ6kbh_A5gTSjh6nE-GneARLy5PY6eYZhokUANavtjs3A1scS1w8DDsGTWYmkgZ8GC-nISnLTy_Pno-pAo97ActDWjQkbo5er4IBvt7bJG_g1DQMPsH9zX3oJn4MerN_d5qTyZfmMejYc-Qd2BgKUdjPXF2EhXaY8TbkQJlCVFU4QNRtgJ8Z8myHTj28p2rysD4GJBhbxMsMiAys2-Eb1YX63bZ34UNfqXGUE5WOjPzXaRgLGcIFPscLD_I5MzDSnvNAv_Ro00n66JdYAxVQ4mh6e5enbS9yp3iLVEcl73RSZTAFKyltS-XADcf'
+
+
+

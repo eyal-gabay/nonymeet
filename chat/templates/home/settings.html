@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>settings</title>
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'icons/icon1.ico' %}"/>
+    <script src="{% static 'js/connect.js' %}"></script>
+</head>
+<style>
+    body {
+        background-color: #494949;
+    }
+    .find {
+        border-radius: 50%;
+        height: 50px;
+        widht: 200px;
+        background-color: black;
+        color: white;
+        position: absolute;
+        top: 75%;
+        left: 25%;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+    --primary-color: #D96AA7;
+    --secondary-color: #171C3A;
+    --complimentary-color: #88BFB5;
+    --contrast-color: #F2E527;
+    --light-color: #D2A9D9;
+    }
+
+    .container {
+      background: #191919;
+      min-height: 100vh;
+      font-family: Montserrat, sans-serif;
+    }
+
+    nav a {
+        font-size: 40px;
+        color: #fff;
+        text-decoration: none;
+        padding: 20px;
+        text-align: center;
+    }
+
+    nav {
+        position: fixed;
+        left: 0;
+        z-index: 50;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        height: 100vh;
+        background: var(--secondary-color);
+    }
+
+    section {
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        width: 0;
+        opacity: 0;
+        transition: all ease-in .5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section h1 {
+        color: #fff;
+        font-size: 50px;
+        text-transform: uppercase;
+        opacity: 0;
+    }
+
+    /* Styles applied on trigger */
+    section:target {
+        opacity: 1;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+    }
+
+    section:target h1 {
+        opacity: 0;
+        animation: 2s fadeIn forwards .5s;
+    }
+
+    #first {
+      background:var(--primary-color);
+    }
+    #second {
+        background: var(--complimentary-color);
+    }
+
+    #third {
+        background: var(--contrast-color);
+    }
+
+    #fourth {
+        background: var(--light-color);
+    }
+
+    @keyframes fadeIn {
+        100% { opacity:1 }
+    }
+
+
+    .logout-btn {
+        font-family: Hack, monospace;
+        background: #d3d3d3;
+        color: #2c2c2c;
+        cursor: pointer;
+        font-size: 1em;
+        padding: 0.5rem;
+        border: 0;
+        transition: all 0.5s;
+        border-radius: 10px;
+        width: 0.5em;
+        position: absolute;
+        right: 5%;
+        bottom: 5%;
+        min-width: 100px;
+
+</style>
+<body>
+    <nav>
+      <a href="/home"><h6>profile</h6><i class="far fa-user"></i></a>
+      <a href="/chat/{{ number }}"><h6>find match</h6><i class="fas fa-briefcase"></i></a>
+      <a href="/likes"><h6>likes</h6><i class="far fa-file"></i></a>
+      <a href="/settings"><h6>settings</h6><i class="far fa-address-card"></i></a>
+    </nav>
+
+    <div class= 'container'>
+        <button class="logout-btn" onclick="deleteCookie()">Logout</button>
+    </div>
+</body>
+<script>
+    function deleteCookie(){
+        document.location.href = "/register/logout"
+    }
+</script>
+</html>

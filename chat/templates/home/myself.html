@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nonymeet | home</title>
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'icons/icon1.ico' %}"/>
+    <script src="{% static 'js/connect.js' %}"></script>
+</head>
+<style>
+    body {
+        background-color: #191919;
+    }
+    .find {
+        border-radius: 50%;
+        height: 50px;
+        widht: 200px;
+        background-color: black;
+        color: white;
+        position: absolute;
+        top: 75%;
+        left: 25%;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+    --primary-color: #D96AA7;
+    --secondary-color: #171C3A;
+    --complimentary-color: #88BFB5;
+    --contrast-color: #F2E527;
+    --light-color: #D2A9D9;
+    }
+
+    //.container {
+    //  background: #191919;
+    //  min-height: 100vh;
+    //  font-family: Montserrat, sans-serif;
+    //}
+
+    nav a {
+        font-size: 40px;
+        color: #fff;
+        text-decoration: none;
+        padding: 20px;
+        text-align: center;
+    }
+
+    nav {
+        position: fixed;
+        left: 0;
+        z-index: 50;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        height: 100vh;
+        background: var(--secondary-color);
+    }
+
+
+    section {
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        width: 0;
+        opacity: 0;
+        transition: all ease-in .5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section h1 {
+        color: #fff;
+        font-size: 50px;
+        text-transform: uppercase;
+        opacity: 0;
+    }
+
+    /* Styles applied on trigger */
+    section:target {
+        opacity: 1;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+    }
+
+    section:target h1 {
+        opacity: 0;
+        animation: 2s fadeIn forwards .5s;
+    }
+
+    #first {
+      background:var(--primary-color);
+    }
+    #second {
+        background: var(--complimentary-color);
+    }
+
+    #third {
+        background: var(--contrast-color);
+    }
+
+    #fourth {
+        background: var(--light-color);
+    }
+
+    @keyframes fadeIn {
+        100% { opacity:1 }
+    }
+
+    #cany {
+        width: 70%;
+        hight: 9000px;
+        background: #171C3A;
+        position: absolute;
+        right: 10%;
+        top: 10%;
+        border-style: solid;
+    }
+    a {
+        // margin-left: 25px;
+        border: 4px solid;
+        border-color: black;
+    }
+
+    a:hover {
+     //   color: black;
+    }
+
+    h6 {
+        margin-top: 70px;
+        margin-bottom: 80px;
+    }
+
+    #pro {
+        position: absolute;
+        top: 12%;
+        left: 21%;
+        color: white;
+        font-family: Arial;
+    }
+
+    #f {
+        position: absolute;
+        top: 10%;
+        left: 20%;
+    }
+
+    .nickname {
+        position: relative;
+        font-size: 23px;
+        color: #B8BCCF ;
+    }
+
+    nav {
+        color: black;
+    }
+
+    #aboutme {
+        position: absolute;
+        top: 23%;
+        right: 10%;
+        border: 5px solid;
+        border-color: black;
+    }
+
+    .abm {
+        position: absolute;
+        left: 55%;
+        top: 12%;
+        font-family: Arial;
+        color: white;
+    }
+
+    #abm {
+        color: transparent;
+    }
+
+</style>
+<body>
+    <nav>
+      <a class="e" href="/home"><h6>profile</h6><i class="far fa-user"></i></a>
+      <a href="/chat/{{ number }}"><h6>find match</h6><i class="fas fa-briefcase"></i></a>
+      <a href="/chat/likes"><h6>likes</h6><i class="far fa-file"></i></a>
+      <a href="settings"><h6>settings</h6><i class="far fa-address-card"></i></a>
+    </nav>
+
+    <canvas width="400" height="200" id="cany">
+    </canvas>
+    <h1 id="pro">profile</h1>
+    <form action="" id="f" method="post">
+        {% csrf_token %}
+        <br><br><br><br><br><br><br>
+        <label class="nickname">&nbsp;&nbsp;&nbsp;nickname&nbsp; <input name="nickname"  value="{{ nn }}"  required></label><br><br><br><br>
+        <label class="nickname">&nbsp;&nbsp;&nbsp;my age is &nbsp; <input maxlength="2" name="myage" type="text" onkeypress="return [45, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57].includes(event.charCode);" size="2" value="{{ ma }}" required></label><br><br><br><br>
+        <label class="nickname">&nbsp;&nbsp;&nbsp;age I want to meet &nbsp; <input placeholder=" min" maxlength="2" onkeypress="return [45, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57].includes(event.charCode);" size="2" name="minage" type="text" value="{{ maiw }}" required>&nbsp;&nbsp;<input placeholder=" max" maxlength="2" onkeypress="return [45, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57].includes(event.charCode);" size="2" name="maxage" type="text" value="{{ aiw }}"></label><br><br><br><br>
+        <label class="nickname">&nbsp;&nbsp;&nbsp;my gender &nbsp  </label><input type="radio" id="male"{{ giw1 }} name="genderiwant"  value="male" required> <label class="nickname">male</label>&nbsp;&nbsp;&nbsp;<input type="radio" id="female" {{ mg2 }} name="mygender" value="female"> <label class="nickname" for="female">Female</label><br><br><br><br>
+        <label class="nickname">&nbsp;&nbsp;&nbsp;gender I want to meet &nbsp; <input type="radio" {{ giw1 }} name="genderiwant"  value="male" required> male</label> &nbsp;&nbsp;<input type="radio" {{ giw2 }} name="genderiwant" value="female"> <label class="nickname">female</label><br><br><br><br>
+        {{ cant }}
+    </form>
+    <button onclick="document.location.href = 'edit';">cccccc</button>
+    <p id="abm">{{ abm }}</p>
+    <h1 class="abm">about me</h1>
+    <textarea name="aboutme" id="aboutme" form="f" cols="70" rows="28" required>{{ abm }}</textarea>
+</body>
+
+<script>
+    function changeP() {
+        document.getElementByClass("abm").value = document.getElementByClass("abm").value.replace("+", "+_+_+");
+        return true;
+    }
+</script>
+</html>

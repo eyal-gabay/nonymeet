@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Find match</title>
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'icons/icon1.ico' %}"/>
+    <script src="{% static 'js/connect.js' %}"></script>
+</head>
+<style>
+    body {
+        background-color: #191919;
+    }
+
+    h1 {
+        color: white;
+        position: absolute;
+        top: 40%;
+        left: 40%;
+    }
+
+    .lds-heart {
+      display: inline-block;
+      position: absolute;
+      top: 40%;
+      left: 47.5%;
+      width: 80px;
+      height: 80px;
+      transform: rotate(45deg);
+      transform-origin: 60px 60px;
+    }
+    .lds-heart div {
+      top: 32px;
+      left: 32px;
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      background: #fff;
+      animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    .lds-heart div:after,
+    .lds-heart div:before {
+      content: " ";
+      position: absolute;
+      display: block;
+      width: 32px;
+      height: 32px;
+      background: #fff;
+    }
+    .lds-heart div:before {
+      left: -24px;
+      border-radius: 50% 0 0 50%;
+    }
+    .lds-heart div:after {
+      top: -24px;
+      border-radius: 50% 50% 0 0;
+    }
+    @keyframes lds-heart {
+      0% {
+        transform: scale(0.95);
+      }
+      5% {
+        transform: scale(1.1);
+      }
+      39% {
+        transform: scale(0.85);
+      }
+      45% {
+        transform: scale(1);
+      }
+      60% {
+        transform: scale(0.95);
+      }
+      100% {
+        transform: scale(0.9);
+      }
+    }
+
+</style>
+<body>
+    <h1>find match</h1>
+    <div class="lds-heart"><div></div></div>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+        // xhr.send("");
+    </script>
+</body>
+</html>
